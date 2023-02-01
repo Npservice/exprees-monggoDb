@@ -1,0 +1,62 @@
+<% if(errorValidate.length > 0) {%>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong><%= errorValidate %> </strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+<form method="post" action="/admin/update/<%= edit.id %> ">
+  <div class="col-8 my-4">
+    <div class="card">
+      <div class="card-header">
+        <h5><strong>Update Surat</strong></h5>
+      </div>
+      <div class="card-body">
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="name">Nama</label>
+          </div>
+          <div class="col">
+            <input type="text" name="name" class="form-control" value="<%= edit.name %> ">
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="alamat">Alamat</label>
+          </div>
+          <div class="col">
+            <input type="text" name="alamat" class="form-control" value="<%= edit.alamat %> ">
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="phone">Phone</label>
+          </div>
+          <div class="col">
+            <input type="tel" name="phone" class="form-control" value="<%= edit.phone %> ">
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="document">document</label>
+          </div>
+          <div class="col">
+            <input type="text" name="document" class="form-control" value="<%= edit.document %> ">
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="status">status</label>
+          </div>
+          <div class="col">
+            <input type="text" name="status" class="form-control" value="<%= edit.status %> ">
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-end align-content-end">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

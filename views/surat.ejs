@@ -1,0 +1,60 @@
+ <div class="card my-3">
+   <div class="card-header">
+     <div class="row">
+       <div class="col-6">
+         <div class="d-flex justify-content-start align-content-start">
+           <h4><strong>SURAT</strong></h4>
+         </div>
+       </div>
+       <div class="col-6">
+         <div class="d-flex justify-content-end align-content-end">
+           <h4 class="text-secondary"><strong class="text-dark">Admin</strong>/Surat</h4>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="card mb-4">
+   <div class="card-header">
+     <i class="fas fa-table me-1"></i>
+     <strong>
+       Surat Data
+     </strong>
+   </div>
+   <div class="card-body">
+     <table id="datatablesSimple">
+       <thead>
+         <tr>
+           <th>No</th>
+           <th>Name</th>
+           <th>Alamat</th>
+           <th>Phone</th>
+           <th>Document</th>
+           <th>Status</th>
+           <th>Opsi</th>
+         </tr>
+       </thead>
+       <tbody>
+         <% var nomer = 1 %><% surat.forEach(result => { %>
+         <tr>
+           <td><%= nomer++ %> </td>
+           <td><%= result.name %> </td>
+           <td><%= result.alamat %> </td>
+           <td><%= result.phone %> </td>
+           <td><%= result.document %> </td>
+           <td><%= result.status %> </td>
+           <td>
+             <center>
+               <div class="btn-group" role="group" aria-label="Basic example">
+                 <a href="/admin/edit/<%= result.id %> " type="button" class="btn btn-success"><i class="fas fa-pencil"></i></a>
+                 <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                 <a href="/admin/show/document/<%= result.id %> " type="button" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+               </div>
+             </center>
+           </td>
+         </tr>
+         <% }) %>
+       </tbody>
+     </table>
+   </div>
+ </div>

@@ -1,0 +1,76 @@
+<% if ( expressFlash.length > 0 ) { %>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong><%= expressFlash %> </strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+<% if ( errorValidate.length > 0 ) { %>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong><%= errorValidate %> </strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+<div class="col-8">
+  <form action="/admin/insert" method="post" enctype="multipart/form-data">
+    <div class="card my-3">
+      <div class="card-header">
+        <h4>Input Surat</h4>
+      </div>
+      <div class="card-body my-2">
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="name">Nama</label>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" name="name" id="">
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="alamat">Alamat</label>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" name="alamat" id="">
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="phone">Phone</label>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" name="phone" id="">
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="document">Document</label>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" name="document" id="">
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="status">Status</label>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" name="status" id="">
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2">
+            <label for="file">File</label>
+          </div>
+          <div class="col">
+            <input type="file" class="form-control" name="file" id="">
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-end align-content-end">
+          <button type="submit" class="btn btn-primary"><Strong>Submit</Strong></button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
